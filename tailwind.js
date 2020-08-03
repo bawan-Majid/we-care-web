@@ -18,6 +18,10 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
+      beige: '#eedad1',
+      darkBeige: '#d4b5b0',
+      orangeP: '#f69e7b',
+      darkP: '#383e56',
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
@@ -28,7 +32,6 @@ module.exports = {
         700: '#4a5568',
         800: '#2d3748',
         900: '#1a202c',
-        920: '#383E56',
       },
       red: {
         100: '#fff5f5',
@@ -51,10 +54,6 @@ module.exports = {
         700: '#c05621',
         800: '#9c4221',
         900: '#7b341e',
-        910: '#EEDAD1',
-        920: '#FDEFE9',
-        930: '#F69E7B',
-        940: '#D4B5B0',
       },
       yellow: {
         100: '#fffff0',
@@ -99,7 +98,6 @@ module.exports = {
         700: '#2b6cb0',
         800: '#2c5282',
         900: '#2a4365',
-        910: '#383E56',
       },
       indigo: {
         100: '#ebf4ff',
@@ -155,10 +153,6 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
-      '80': '20rem',
-      '82': '21.5rem',
-      '84': '25rem',
-      '86': '33rem',
     },
     backgroundColor: (theme) => theme('colors'),
     backgroundOpacity: (theme) => theme('opacity'),
@@ -255,7 +249,6 @@ module.exports = {
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
-        '"Pacifico"',
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
@@ -412,7 +405,6 @@ module.exports = {
       '1': '1',
       '2': '2',
     },
-
     textColor: (theme) => theme('colors'),
     textOpacity: (theme) => theme('opacity'),
     width: (theme) => ({
@@ -642,37 +634,6 @@ module.exports = {
       '700': '700ms',
       '1000': '1000ms',
     },
-    animation: {
-      none: 'none',
-      spin: 'spin 1s linear infinite',
-      ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
-      pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      bounce: 'bounce 1s infinite',
-    },
-    keyframes: {
-      spin: {
-        from: { transform: 'rotate(0deg)' },
-        to: { transform: 'rotate(360deg)' },
-      },
-      ping: {
-        '0%': { transform: 'scale(1)', opacity: '1' },
-        '75%, 100%': { transform: 'scale(2)', opacity: '0' },
-      },
-      pulse: {
-        '0%, 100%': { opacity: '1' },
-        '50%': { opacity: '.5' },
-      },
-      bounce: {
-        '0%, 100%': {
-          transform: 'translateY(-25%)',
-          animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
-        },
-        '50%': {
-          transform: 'translateY(0)',
-          animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
-        },
-      },
-    },
   },
   variants: {
     accessibility: ['responsive', 'focus'],
@@ -731,7 +692,6 @@ module.exports = {
     order: ['responsive'],
     outline: ['responsive', 'focus'],
     overflow: ['responsive'],
-    overscrollBehavior: ['responsive'],
     padding: ['responsive'],
     placeholderColor: ['responsive', 'focus'],
     placeholderOpacity: ['responsive', 'focus'],
@@ -774,7 +734,6 @@ module.exports = {
     transitionTimingFunction: ['responsive'],
     transitionDuration: ['responsive'],
     transitionDelay: ['responsive'],
-    animation: ['responsive'],
   },
   corePlugins: {},
   plugins: [],
